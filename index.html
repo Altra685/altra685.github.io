@@ -2,103 +2,331 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aldiansyah Permana | Data & Automation</title>
-<meta name="description" content="Portfolio Aldiansyah Permana — Data & Automation, Teknik Sipil, Excel/Python pipelines, Ex-intern Witteveen+Bos.">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aldiansyah Permana — Civil, Data &amp; Automation</title>
+<meta name="description" content="Portofolio Aldiansyah Permana: analisis hidrologi dan geoteknik, pengolahan data iklim dan laut, dashboard, serta otomasi.">
+<meta name="author" content="Aldiansyah Permana">
+<meta name="theme-color" content="#141210">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aldiansyah Permana — Civil, Data &amp; Automation">
+<meta property="og:description" content="Analisis hidrologi dan geoteknik, pengolahan data iklim dan laut, dashboard, serta otomasi.">
+<meta property="og:locale" content="id_ID">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141210'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' fill='%23d94f3d' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* huruf dimuat dari berkas lokal — tanpa permintaan ke luar */
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/source-serif-4.woff2') format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:300 600;font-display:swap;src:url('fonts/source-serif-4-italic.woff2') format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url('fonts/jetbrains-mono.woff2') format('woff2')}
+</style>
+<style>
+:root{--bg:#141210;--panel:#1b1815;--ink:#ece5da;--mut:#a39a8b;--dim:#6d6455;--acc:#d94f3d;--acc2:#f0a08e;--line:#2a2620}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(700px 460px at 20% -10%,rgba(217,79,61,.10),transparent 60%)}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--acc);color:#140f0c;padding:10px 16px;font-family:"JetBrains Mono",monospace;font-size:12px;z-index:100}
+.skip:focus{left:12px;top:12px}
+.top{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:16px 34px;background:rgba(20,18,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);font-family:"JetBrains Mono",monospace;font-size:12px}
+.top b{font-family:"Source Serif 4",serif;font-weight:600;font-size:18px}
+.top b i{color:var(--acc);font-style:normal}
+.top nav a{margin-left:20px;color:var(--mut)}
+.top nav a:hover{color:var(--acc2)}
+main{max-width:1040px;margin:0 auto;padding:0 34px}
+.hero{padding:96px 0 48px;position:relative}
+.hero .k{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+.hero h1{font-weight:300;font-size:clamp(34px,5.6vw,68px);line-height:1.08;letter-spacing:-.02em;margin:20px 0 0;max-width:22ch;overflow-wrap:break-word;hyphens:auto}
+.hero h1 em{font-style:italic;color:var(--acc)}
+.hero .meta{display:flex;gap:34px;flex-wrap:wrap;margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--mut)}
+.hero .meta b{display:block;color:var(--ink);font-weight:500;font-family:"Source Serif 4",serif}
+.chap{margin-top:40px;position:relative}
+.chap .ch{display:flex;align-items:baseline;gap:16px;padding-bottom:14px;border-bottom:2px solid var(--ink)}
+.chap .ch .n{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--acc)}
+.chap .ch h2{font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-family:"JetBrains Mono",monospace}
+.chap .ch .r{flex:1;height:1px;background:var(--line)}
+.ent{display:grid;grid-template-columns:74px 1fr 168px;gap:26px;padding:26px 0;border-bottom:1px solid var(--line)}
+.ent .sec{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--dim);line-height:1.8;overflow-wrap:anywhere}
+.ent .sec b{display:block;color:var(--acc);font-weight:500}
+.ent h3{font-weight:600;font-size:clamp(20px,2.8vw,28px);letter-spacing:-.01em;line-height:1.15;margin-bottom:5px}
+.ent h3 em{font-style:italic;color:var(--acc2);font-weight:300}
+.ent .t{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--dim);margin-bottom:10px}
+.ent p{font-size:14.5px;color:var(--mut);max-width:70ch}
+.ent p::first-letter{font-weight:600}
+.ent .m{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--mut);text-align:right;line-height:1.9}
+.ent .m b{display:block;color:var(--acc2);font-size:14px;font-family:"Source Serif 4",serif}
+@media(max-width:820px){.ent{grid-template-columns:1fr;gap:8px}.ent .m{text-align:left}}
+@media(max-width:400px){main{padding:0 20px}.top{padding:14px 20px}.hero h1{font-size:clamp(30px,9vw,42px)}}
+.note{margin-top:34px;padding:18px 20px;border-left:3px solid var(--acc);background:var(--panel);font-size:13.5px;color:var(--mut);max-width:78ch}
+.note b{color:var(--ink)}
+.sk{display:grid;grid-template-columns:1fr 1fr;gap:22px 46px;padding:36px 0;border-top:2px solid var(--ink);margin-top:44px}
+.sk div{font-size:14px;color:var(--mut)}
+.sk div b{display:block;font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:5px}
+.sk div .ev{display:block;margin-top:7px;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.03em;color:var(--dim)}
+@media(max-width:700px){.sk{grid-template-columns:1fr}}
+.cta{padding:96px 0 60px;text-align:center}
+.cta h2{font-weight:300;font-style:italic;font-size:clamp(30px,6.4vw,80px);line-height:1.05;letter-spacing:-.03em}
+.cta h2 em{color:var(--acc);font-style:italic}
+.cta a{display:inline-block;overflow-wrap:anywhere;max-width:100%;margin-top:22px;font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--acc2);border-bottom:1px solid var(--acc);padding-bottom:3px}
+footer{max-width:1040px;margin:0 auto;padding:18px 34px 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--dim);border-top:1px solid var(--line)}
+</style>
+<style>
+/* ===== LAPISAN EFEK v3 — teroptimasi (1 loop rAF, tanpa blend-mode) ===== */
+:root{--glow:rgba(217,79,61,.55);--glow2:rgba(217,79,61,.55);--glow3:rgba(217,79,61,.55)}
+main,footer{position:relative;z-index:1}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+#vig{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55;background:radial-gradient(130% 120% at 50% 46%,transparent 56%,rgba(0,0,0,.5) 100%)}
+#dust{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55;transform:translateZ(0)}
+.prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:90;background:linear-gradient(90deg,var(--acc),var(--acc2));box-shadow:0 0 10px var(--glow)}
+.prog::after{content:"";position:absolute;right:-2px;top:-3px;width:9px;height:8px;border-radius:50%;background:var(--acc2);box-shadow:0 0 12px var(--acc),0 0 26px var(--acc)}
+#lamp{position:fixed;top:0;left:0;width:560px;height:560px;margin:-280px 0 0 -280px;z-index:0;pointer-events:none;background:radial-gradient(circle,var(--glow),transparent 62%);opacity:.14;will-change:transform}
+#dot{position:fixed;top:0;left:0;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:50%;background:var(--acc);z-index:95;pointer-events:none;box-shadow:0 0 12px var(--acc);opacity:0;will-change:transform;transition:width .22s,height .22s,margin .22s,opacity .3s}
+@keyframes breathe{0%,100%{text-shadow:0 0 20px var(--glow)}50%{text-shadow:0 0 38px var(--glow2),0 0 70px var(--glow)}}
+.hero h1 em{animation:breathe 6.5s ease-in-out infinite;text-shadow:0 0 26px var(--glow)}
+.cta h2 em{animation:breathe 7.5s ease-in-out infinite;text-shadow:0 0 30px var(--glow2)}
+.top b i{text-shadow:0 0 16px var(--glow)}
+.chap .ch .n{text-shadow:0 0 14px var(--glow)}
+.ent .m b{text-shadow:0 0 16px var(--glow2)}
+.cta a{text-shadow:0 0 14px var(--glow3)}
+@keyframes glitch{
+  0%,89.4%,100%{transform:translateX(0);text-shadow:none}
+  90%{transform:translateX(-2px);text-shadow:-1.2px 0 var(--acc2),1.2px 0 #38d6e6}
+  91.5%{transform:translateX(2px);text-shadow:1.2px 0 var(--acc2),-1.2px 0 #38d6e6}
+  93%{transform:translateX(-1px);text-shadow:-1px 0 var(--acc2),1px 0 #38d6e6}
+  94.5%,99%{transform:translateX(0);text-shadow:none}
+}
+.hero h1{animation:glitch 11s steps(1,end) infinite}
+.twc{display:inline-block;width:.5ch;height:1em;background:var(--acc);vertical-align:-.12em;margin-left:2px;box-shadow:0 0 12px var(--acc);animation:blink .85s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.chap .ch{position:relative}
+.chap .ch::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:linear-gradient(90deg,var(--acc),transparent);box-shadow:0 0 12px var(--acc);transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
+.chap.in .ch::after{width:100%}
+.top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--acc),transparent);opacity:0;transition:opacity .5s}
+.top.scr::after{opacity:.7}
+.ent{position:relative;overflow:hidden}
+.ent::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),var(--glow3),transparent 62%)}
+.ent:hover::after{opacity:1}
+.ent::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:2px;background:linear-gradient(180deg,transparent,var(--acc),transparent);box-shadow:0 0 14px var(--acc);opacity:0;transition:opacity .4s}
+.ent:hover::before{opacity:1}
+.ent{transition:background .4s}
+.ent:hover{background:linear-gradient(90deg,var(--glow3),transparent 45%)}
+.ent h3{transition:text-shadow .4s}.ent:hover h3{text-shadow:0 0 24px var(--glow)}
+.ent .sec b{transition:text-shadow .4s,color .4s}.ent:hover .sec b{color:var(--acc2);text-shadow:0 0 14px var(--glow)}
+.ent .m b{transition:text-shadow .4s}.ent:hover .m b{text-shadow:0 0 18px var(--glow2)}
+.note{transition:border-color .4s,box-shadow .4s}.note:hover{border-color:var(--acc2);box-shadow:0 0 40px -16px var(--glow)}
+.sk div b{transition:text-shadow .4s}.sk div:hover b{text-shadow:0 0 14px var(--glow)}
+.top nav a{transition:color .3s,text-shadow .3s}.top nav a:hover{text-shadow:0 0 14px var(--glow2)}
+.cta a{transition:text-shadow .4s,letter-spacing .4s}.cta a:hover{text-shadow:0 0 22px var(--glow);letter-spacing:.04em}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#0d0b09}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--acc),var(--acc2));border-radius:10px;border:2px solid #0d0b09}
+@media print{#dust,.prog,#lamp,#dot,#vig,.top::after,body::after{display:none!important}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero h1{animation:none!important}}
+</style>
 </head>
 <body>
-<header class="topbar">
-  <nav class="container nav">
-    <a class="brand" href="#home">AP<span>.</span></a>
-    <ul class="links">
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#experience">Pengalaman</a></li>
-      <li><a href="#projects">Proyek</a></li>
-      <li><a href="#skills">Keahlian</a></li>
-      <li><a href="#contact">Kontak</a></li>
-    </ul>
-  </nav>
-</header>
+<div id="vig"></div>
+<canvas id="dust" aria-hidden="true"></canvas>
+<div class="prog" id="prog"></div>
+<div id="lamp" aria-hidden="true"></div>
+<div id="dot" aria-hidden="true"></div>
+<a class="skip" href="#isi">Lewati ke isi</a>
+<div class="top"><b>Aldiansyah<i>.</i></b><nav><a href="https://github.com/Altra685" target="_blank" rel="noopener me">github ↗</a><a href="mailto:aldiansyahpermanap@gmail.com">email</a></nav></div>
+<main id="isi">
+  <header class="hero">
+    <div class="k">Civil · Data · Automation</div>
+    <h1>Analisis hidrologi dan geoteknik. <em>Pengolahan data lapangan dan satelit.</em></h1>
+  </header>
 
-<main>
-  <section id="home" class="hero">
-    <div class="container">
-      <p class="eyebrow">Halo, saya</p>
-      <h1>Aldiansyah Permana</h1>
-      <h2>Data &amp; Automation &middot; Teknik Sipil</h2>
-      <p class="lead">Saya membantu mengubah data mentah jadi <b>laporan, dashboard, dan sistem otomatis</b> — dengan latar belakang teknik sipil &amp; pengalaman di konsultan internasional.</p>
-      <div class="cta">
-        <a class="btn" href="#projects">Lihat Proyek</a>
-        <a class="btn ghost" href="#contact">Hubungi Saya</a>
-      </div>
-    </div>
+  <section class="chap"><div class="ch"><span class="n">I</span><h2>Software</h2><span class="r"></span><span class="n">2</span></div>
+    <div class="ent"><div class="sec"><b>§1.1</b>Streamlit · FastAPI · SQLite · yfinance</div><div>
+      <h3>IHSG Desk</h3>
+      <div class="t">STREAMLIT · FASTAPI · SQLITE</div>
+      <p>Sistem pemantauan IHSG/IDX: board, radar, watchlist, sinyal teknikal, skor. Alur data: kolektor → SQLite → 11 engine analisis → FastAPI → Streamlit. Pergerakan harga di luar batas wajar pada saham likuid ditandai dan dinormalisasi.</p>
+    </div><div class="m"><b>11 engine</b>data → engine → UI<div style="margin-top:8px"><b>v3.2.1</b>data-truth</div></div></div>
+    <div class="ent"><div class="sec"><b>§1.2</b>Python · Streamlit · pytest · MIT</div><div>
+      <h3>AutoPlot Civil</h3>
+      <div class="t">PYTHON · STREAMLIT · MIT</div>
+      <p>Sebelas modul perhitungan: kuat tekan beton (koreksi h/d), sondir/CPT, saringan USCS/AASHTO, pemadatan Proctor, hidrologi Manning dan Rasional, SPT, Atterberg, penurunan Terzaghi, dinding penahan Rankine. Tiap modul menerima data uji lapangan dan mengeluarkan besaran, kurva, serta lembar hasil.</p>
+    </div><div class="m"><b>11+ modul</b>±31.000 baris<div style="margin-top:8px"><b>MIT</b>open source</div></div></div>
   </section>
 
-  <section id="about" class="container">
-    <h3 class="sec-title">Tentang</h3>
-    <p>Mahasiswa Teknik Sipil (lulus ±2027) yang mendalami <b>data &amp; otomasi</b>. Terbiasa membuat pipeline Excel/Google Sheets, dashboard interaktif, dan script Python untuk pekerjaan yang berulang &amp; ribet — digabung dengan pemahaman rekayasa (hidrologi, drainase, data iklim).</p>
-    <p>Magang 5 bulan di <b>Witteveen+Bos Indonesia</b> (geotech) membuat saya terbiasa dengan standar kerja profesional: rapi, terdokumentasi, dan tepat waktu.</p>
+  <section class="chap"><div class="ch"><span class="n">II</span><h2>Engineering</h2><span class="r"></span><span class="n">3</span></div>
+    <div class="ent"><div class="sec"><b>§2.1</b>Gumbel · HSS Nakayasu</div><div>
+      <h3>Hidrologi</h3>
+      <div class="t">GUMBEL · HSS NAKAYASU</div>
+      <p>Debit rencana dan dimensi hidrolis saluran. Kala ulang: distribusi Gumbel. Hidrograf satuan: HSS Nakayasu. Debit puncak, dimensi penampang, dan tinggi jagaan mengikuti hasil kala ulang terpilih.</p>
+    </div><div class="m"><b>50,88 m³/s</b>Q100<div style="margin-top:8px"><b>316,25 mm</b>X100</div></div></div>
+    <div class="ent"><div class="sec"><b>§2.2</b>Gumbel · kala ulang</div><div>
+      <h3>Analisis Frekuensi Curah Hujan</h3>
+      <div class="t">FREKUENSI · DISTRIBUSI GUMBEL</div>
+      <p>Analisis frekuensi terhadap curah hujan harian maksimum tahunan. Deret hujan diseleksi berdasarkan kelengkapan pencatatan; parameter statistik (rerata, simpangan baku, Yn, Sn) dihitung; curah hujan rencana dievaluasi untuk setiap kala ulang. Keluaran digunakan untuk mengkaji respons debit puncak terhadap perubahan tata guna lahan.</p>
+    </div><div class="m"><b>Distribusi Gumbel</b>kala ulang<div style="margin-top:8px"><b>T25–T100</b>rentang</div></div></div>
+    <div class="ent"><div class="sec"><b>§2.3</b>SRGI · GMRT · MSL</div><div>
+      <h3>Analisis Pasut &amp; Batimetri</h3>
+      <div class="t">HARMONIK · SRGI · GMRT</div>
+      <p>Analisis harmonik terhadap deret tinggi muka laut, dilanjutkan densifikasi grid untuk memperoleh sebaran amplitudo dan fasa komponen pasut. Sebelas datum diikatkan pada MSL; selisih terhadap acuan BIG ±0,004 m. Batimetri GMRT dikoreksi terhadap pasut melalui H = TMA − MSL − D.</p>
+    </div><div class="m"><b>8.760 titik</b>pasut<div style="margin-top:8px"><b>±0,004 m</b>vs BIG</div></div></div>
   </section>
 
-  <section id="experience" class="container">
-    <h3 class="sec-title">Pengalaman</h3>
-    <div class="card">
-      <div class="row"><b>Geotech Engineer Intern</b><span class="tag">Witteveen+Bos Indonesia</span></div>
-      <div class="sub">± 5 bulan &middot; konsultan teknik kelas dunia</div>
-      <p>Mendukung pekerjaan geoteknik, menyusun dokumentasi teknis, dan terbiasa dengan alur kerja konsultan profesional.</p>
-    </div>
-    <div class="card">
-      <div class="row"><b>Data & Automation Freelancer</b><span class="tag">mulai 2026</span></div>
-      <div class="sub">menyediakan otomasi Excel/Sheets, dashboard, dan pipeline data</div>
-      <p>Membantu pekerjaan yang berulang jadi cepat &amp; akurat; dari rekapitulasi data sampai laporan otomatis.</p>
-    </div>
+  <section class="chap"><div class="ch"><span class="n">III</span><h2>Data</h2><span class="r"></span><span class="n">2</span></div>
+    <div class="ent"><div class="sec"><b>§3.1</b>Python · long format</div><div>
+      <h3>Harmonisasi Data Iklim</h3>
+      <div class="t">SKEMA TABULAR PANJANG · 1983–2026</div>
+      <p>Penyeragaman data iklim multi-stasiun ke skema tabular panjang: satu baris merepresentasikan kombinasi stasiun, parameter, dan waktu. Rentang yang dicakup 1983–2026. Prosedur meliputi pemeriksaan kelengkapan deret serta penandaan nilai kosong dan pencilan.</p>
+    </div><div class="m"><b>long format</b>penyeragaman<div style="margin-top:8px"><b>per stasiun</b>pemeriksaan celah</div></div></div>
+    <div class="ent"><div class="sec"><b>§3.2</b>NetCDF · xarray · reanalysis</div><div>
+      <h3>Pengolahan Data Laut</h3>
+      <div class="t">NETCDF · GRID MULTI-VARIABEL</div>
+      <p>Pengolahan data laut berformat NetCDF dari grid multi-variabel: tinggi gelombang, kecepatan angin, suhu permukaan laut, salinitas, arus, tinggi muka laut, dan klorofil-a. Keluaran menjadi masukan bagi perhitungan pesisir, analisis pasut, dan batimetri.</p>
+    </div><div class="m"><b>NetCDF</b>grid multi-variabel<div style="margin-top:8px"><b>xarray</b>pengolahan</div></div></div>
   </section>
 
-  <section id="projects" class="container">
-    <h3 class="sec-title">Proyek Pilihan</h3>
-    <div class="grid">
-      <div class="card">
-        <h4>IHSG Market Intelligence Dashboard</h4>
-        <p>Dashboard harga/indeks pasar Indonesia near-realtime: Streamlit + FastAPI + SQLite + yfinance. Analisis, watchlist, dan monitoring data.</p>
-        <div class="chips"><span>Streamlit</span><span>FastAPI</span><span>SQLite</span></div>
-      </div>
-      <div class="card">
-        <h4>Analisis Hidrologi — Capstone</h4>
-        <p>Master perhitungan hidrologi 10 parameter iklim (1983–2026): curah hujan, suhu, ETo, dll. — rapi, terdokumentasi, siap pakai untuk desain.</p>
-        <div class="chips"><span>Excel</span><span>Data Iklim</span><span>Rekayasa</span></div>
-      </div>
-      <div class="card">
-        <h4>Otomasi Data &amp; Laporan</h4>
-        <p>Pipeline otomasi: rekap data, generate laporan &amp; grafik otomatis — reusable &amp; reproducible untuk berbagai kebutuhan (kuliah, kerja, bisnis).</p>
-        <div class="chips"><span>Python</span><span>Excel</span><span>Pipeline</span></div>
-      </div>
-    </div>
-    <p class="muted">+ karya akademik: Pengendalian Banjir, Teknik Pantai (pasut &amp; batimetri), capstone — tersedia atas permintaan.</p>
+  <section class="sk">
+    <div><b>Hidrologi</b>Gumbel · HSS Nakayasu · Q80 · FAO-56 ETo<span class="ev">Q100 50,88 m³/s · X100 316,25 mm</span></div>
+    <div><b>Geoteknik</b>CPT/SPT · Proctor · Terzaghi · Rankine · USCS/AASHTO<span class="ev">AutoPlot Civil</span></div>
+    <div><b>Data &amp; otomasi</b>Python · Excel · Streamlit · FastAPI · SQLite<span class="ev">IHSG Desk, harmonisasi iklim</span></div>
+    <div><b>Pengukuran &amp; laut</b>Harmonik pasut · batimetri · NetCDF · SST · gelombang<span class="ev">pasut, olahan laut</span></div>
   </section>
 
-  <section id="skills" class="container">
-    <h3 class="sec-title">Keahlian</h3>
-    <div class="grid">
-      <div class="card"><h4>Data &amp; Otomasi</h4><ul><li>Excel / Google Sheets (rumus, pivot, template)</li><li>Python (pipeline, scraping, otomasi)</li><li>Dashboard (Streamlit)</li></ul></div>
-      <div class="card"><h4>Teknik Sipil</h4><ul><li>Hidrologi &amp; data iklim</li><li>Drainase, banjir, pantai (dasar)</li><li>BIM &amp; dokumentasi teknis</li></ul></div>
-      <div class="card"><h4>Teknis lain</h4><ul><li>SQLite / database dasar</li><li>FastAPI dasar, Git/GitHub</li><li>Scraping &amp; otomasi browser</li></ul></div>
-    </div>
-  </section>
-
-  <section id="contact" class="container">
-    <h3 class="sec-title">Kontak</h3>
-    <p>Terbuka untuk proyek freelance, kolaborasi, atau peluang kerjaan.</p>
-    <ul class="contact">
-      <li>Email: <a href="mailto:aldiansyahpermanap@gmail.com">aldiansyahpermanap@gmail.com</a></li>
-      <li>GitHub: <a href="https://github.com/Altra685" target="_blank" rel="noopener">github.com/Altra685</a></li>
-      <li>LinkedIn: (segera)</li>
-    </ul>
-  </section>
+  <section class="cta"><h2>Ada data yang perlu <em>dirapikan, dihitung, atau dijadikan dashboard?</em></h2><a href="mailto:aldiansyahpermanap@gmail.com">aldiansyahpermanap@gmail.com →</a></section>
 </main>
+<footer><span>Aldiansyah Permana</span><span>email · github</span></footer>
+<script>
+(function(){
+  "use strict";
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine=matchMedia('(pointer:fine)').matches;
 
-<footer>
-  <div class="container">&copy; 2026 Aldiansyah Permana — Data &amp; Automation</div>
-</footer>
+  /* 1) scroll -> progres, vignette, topbar (throttle rAF) */
+  var p=document.getElementById('prog'),vig=document.getElementById('vig'),top=document.querySelector('.top'),sTick=false;
+  function onScroll(){
+    if(sTick)return; sTick=true;
+    requestAnimationFrame(function(){
+      var h=document.documentElement,x=h.scrollTop||window.pageYOffset,m=h.scrollHeight-h.clientHeight,pr=m>0?x/m:0;
+      if(p)p.style.width=(pr*100)+'%';
+      if(vig)vig.style.opacity=(0.5+pr*0.2).toFixed(3);
+      if(top)top.classList.toggle('scr',x>10);
+      sTick=false;
+    });
+  }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  /* 2) ketik judul */
+  var h1=document.querySelector('.hero h1');
+  if(h1 && !reduce && !h1.dataset.tw){
+    h1.dataset.tw='1';
+    var orig=h1.innerHTML; h1.style.minHeight=h1.offsetHeight+'px';
+    var segs=[],re=/<em>([\s\S]*?)<\/em>/g,last=0,mm;
+    while((mm=re.exec(orig))){
+      if(mm.index>last)segs.push({t:orig.slice(last,mm.index),em:0});
+      segs.push({t:mm[1],em:1}); last=re.lastIndex;
+    }
+    if(last<orig.length)segs.push({t:orig.slice(last),em:0});
+    h1.innerHTML=''; var nodes=[];
+    for(var i=0;i<segs.length;i++){
+      var holder=segs[i].em?document.createElement('em'):document.createElement('span');
+      h1.appendChild(holder); nodes.push({el:holder,s:segs[i].t});
+    }
+    var caret=document.createElement('span'); caret.className='twc'; h1.appendChild(caret);
+    var si=0,ci=0;
+    (function step(){
+      if(si>=nodes.length){ if(caret.parentNode)caret.parentNode.removeChild(caret); return; }
+      var n=nodes[si];
+      if(ci<n.s.length){ n.el.textContent=n.s.slice(0,++ci); } else { si++; ci=0; }
+      setTimeout(step,23);
+    })();
+  }
+
+  /* 3) sorot baris: satu listener delegasi */
+  if(fine&&!reduce){
+    var hl=null;
+    addEventListener('pointermove',function(e){
+      var t=e.target,el=(t&&t.closest)?t.closest('.ent'):null;
+      if(el!==hl){ if(hl){hl.style.removeProperty('--mx');hl.style.removeProperty('--my');} hl=el; }
+      if(el){ var r=el.getBoundingClientRect(); el.style.setProperty('--mx',(e.clientX-r.left)+'px'); el.style.setProperty('--my',(e.clientY-r.top)+'px'); }
+    },{passive:true});
+  }
+
+  /* 4) satu loop rAF: lampu + dot + debu + sweep idle */
+  var lamp=document.getElementById('lamp'),dot=document.getElementById('dot'),cv=document.getElementById('dust');
+  var ctx=null,W=0,H=0,P=[],sprite=null,frame=0,raf=null,running=false;
+  var tx=innerWidth*0.5,ty=innerHeight*0.3,cx=tx,cy=ty,dx=tx,dy=ty,lastMove=performance.now(),sy0=0;
+  function accent(){ return (getComputedStyle(document.documentElement).getPropertyValue('--acc')||'#d94f3d').trim(); }
+  function makeSprite(col){
+    var s=document.createElement('canvas'),r=8; s.width=s.height=r*2;
+    var c=s.getContext('2d'),gr=c.createRadialGradient(r,r,0,r,r,r);
+    gr.addColorStop(0,col); gr.addColorStop(1,'rgba(0,0,0,0)');
+    c.fillStyle=gr; c.beginPath(); c.arc(r,r,r,0,6.2832); c.fill(); return s;
+  }
+  function sizeCanvas(){
+    if(!cv)return;
+    var dpr=Math.min(devicePixelRatio||1,1.25);
+    W=cv.width=Math.round(innerWidth*dpr); H=cv.height=Math.round(innerHeight*dpr);
+    cv.style.width=innerWidth+'px'; cv.style.height=innerHeight+'px';
+    var n=Math.round(Math.min(84,Math.max(26,(innerWidth*innerHeight)/46000)));
+    P=[]; for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.4+.4,s:Math.random()*.22+.06,a:Math.random()*.35+.08,ph:Math.random()*6.28});
+    ctx=cv.getContext('2d'); ctx.clearRect(0,0,W,H);
+  }
+  function drawDust(){
+    if(!ctx)return; ctx.clearRect(0,0,W,H);
+    var off=(sy0*0.06)%H; if(off<0)off+=H;
+    for(var i=0;i<P.length;i++){
+      var q=P[i]; q.y-=q.s; q.x+=Math.sin(q.ph+q.y*0.004)*0.14; q.ph+=0.01;
+      if(q.y<-4){ q.y=H+4; q.x=Math.random()*W; }
+      var yy=q.y-off; if(yy<-8)yy+=H; if(yy>H+8)yy-=H;
+      ctx.globalAlpha=q.a*(0.6+0.4*Math.sin(q.ph));
+      ctx.drawImage(sprite,q.x-9,yy-9,18,18);
+    }
+    ctx.globalAlpha=1;
+  }
+  function loop(){
+    frame++;
+    var now=performance.now();
+    if(now-lastMove>2600){
+      var t=now*0.00035;
+      tx=innerWidth*(0.5+0.33*Math.sin(t*1.3));
+      ty=innerHeight*(0.46+0.30*Math.sin(t*0.92));
+      if(dot&&dot.style.opacity!=='0')dot.style.opacity='0';
+    }
+    cx+=(tx-cx)*0.07; cy+=(ty-cy)*0.07; dx+=(tx-dx)*0.35; dy+=(ty-dy)*0.35;
+    if(lamp)lamp.style.transform='translate3d('+(cx|0)+'px,'+(cy|0)+'px,0)';
+    if(dot)dot.style.transform='translate3d('+(dx|0)+'px,'+(dy|0)+'px,0)';
+    if((frame&1)===0)drawDust();
+    raf=requestAnimationFrame(loop);
+  }
+  function start(){ if(!running){ running=true; sy0=window.pageYOffset||0; raf=requestAnimationFrame(loop); } }
+  function stop(){ if(running){ running=false; if(raf)cancelAnimationFrame(raf); raf=null; } }
+  if(fine&&!reduce&&lamp){
+    addEventListener('pointermove',function(e){ tx=e.clientX; ty=e.clientY; lastMove=performance.now(); if(dot)dot.style.opacity='1'; },{passive:true});
+    addEventListener('pointerdown',function(){ if(dot){dot.style.width='16px';dot.style.height='16px';dot.style.margin='-8px 0 0 -8px';} });
+    addEventListener('pointerup',function(){ if(dot){dot.style.width='7px';dot.style.height='7px';dot.style.margin='-3.5px 0 0 -3.5px';} });
+    addEventListener('scroll',function(){ sy0=window.pageYOffset||0; },{passive:true});
+    sprite=makeSprite(accent()); sizeCanvas();
+    addEventListener('resize',function(){ sprite=makeSprite(accent()); sizeCanvas(); },{passive:true});
+    start();
+  } else { if(lamp)lamp.style.display='none'; if(dot)dot.style.display='none'; if(cv)cv.style.display='none'; }
+  document.addEventListener('visibilitychange',function(){ if(document.hidden)stop(); else if(fine&&!reduce&&lamp)start(); });
+
+  /* 5) reveal buka-tutup + pengaman anti-blank */
+  var els=document.querySelectorAll('.hero h1,.hero .meta,.ent,.note,.sk,.cta');
+  function showAll(){ els.forEach(function(el){ el.classList.add('in'); el.classList.remove('rv'); el.style.transitionDelay=''; }); }
+  if('IntersectionObserver' in window && !reduce){
+    els.forEach(function(el,i){ el.classList.add('rv'); el.style.transitionDelay=(Math.min(i,9)*45)+'ms'; });
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); e.target.classList.remove('rv'); io.unobserve(e.target); } }); },{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){ io.observe(e); });
+    setTimeout(showAll,2500);
+  } else { showAll(); }
+  var chaps=document.querySelectorAll('.chap');
+  if('IntersectionObserver' in window && !reduce){
+    chaps.forEach(function(c){ new IntersectionObserver(function(es,o){ es.forEach(function(e){ if(e.isIntersecting){ c.classList.add('in'); o.disconnect(); } }); },{threshold:.3}).observe(c); });
+    setTimeout(function(){ chaps.forEach(function(c){ c.classList.add('in'); }); },2600);
+  } else { chaps.forEach(function(c){ c.classList.add('in'); }); }
+})();
+</script>
 </body>
 </html>
