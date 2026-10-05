@@ -1,7 +1,7 @@
 # altra685.github.io
 
-Halaman portofolio Aldiansyah Permana — analisis hidrologi dan geoteknik,
-pengolahan data iklim dan laut, dashboard, serta otomasi.
+Portfolio site for Aldiansyah Permana — hydrological and geotechnical analysis,
+climate and ocean data processing, dashboards, and automation.
 
-Satu berkas HTML tanpa framework. Huruf dilayani dari folder `fonts/`
-agar tidak ada permintaan ke pihak ketiga.
+A single HTML file with no framework. Typefaces are served from the local
+`fonts/` folder so there are no third-party requests.
