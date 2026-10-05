@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Aldiansyah Permana — Civil, Data &amp; Automation</title>
-<meta name="description" content="Portofolio Aldiansyah Permana: analisis hidrologi dan geoteknik, pengolahan data iklim dan laut, dashboard, serta otomasi.">
+<meta name="description" content="Aldiansyah Permana: hydrological and geotechnical analysis, climate and ocean data processing, dashboards, and automation.">
 <meta name="author" content="Aldiansyah Permana">
 <meta name="theme-color" content="#141210">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Aldiansyah Permana — Civil, Data &amp; Automation">
-<meta property="og:description" content="Analisis hidrologi dan geoteknik, pengolahan data iklim dan laut, dashboard, serta otomasi.">
-<meta property="og:locale" content="id_ID">
+<meta property="og:description" content="Hydrological and geotechnical analysis, climate and ocean data processing, dashboards, and automation.">
+<meta property="og:locale" content="en_US">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141210'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' fill='%23d94f3d' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preload" href="fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-/* huruf dimuat dari berkas lokal — tanpa permintaan ke luar */
+/* typefaces are served from local files — no external requests */
 @font-face{font-family:'Source Serif 4';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/source-serif-4.woff2') format('woff2')}
 @font-face{font-family:'Source Serif 4';font-style:italic;font-weight:300 600;font-display:swap;src:url('fonts/source-serif-4-italic.woff2') format('woff2')}
 @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url('fonts/jetbrains-mono.woff2') format('woff2')}
@@ -134,66 +134,66 @@ body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opac
 <div class="prog" id="prog"></div>
 <div id="lamp" aria-hidden="true"></div>
 <div id="dot" aria-hidden="true"></div>
-<a class="skip" href="#isi">Lewati ke isi</a>
+<a class="skip" href="#isi">Skip to content</a>
 <div class="top"><b>Aldiansyah<i>.</i></b><nav><a href="https://github.com/Altra685" target="_blank" rel="noopener me">github ↗</a><a href="mailto:aldiansyahpermanap@gmail.com">email</a></nav></div>
 <main id="isi">
   <header class="hero">
     <div class="k">Civil · Data · Automation</div>
-    <h1>Analisis hidrologi dan geoteknik. <em>Pengolahan data lapangan dan satelit.</em></h1>
+    <h1>Hydrological and geotechnical analysis. <em>Field and satellite data processing.</em></h1>
   </header>
 
   <section class="chap"><div class="ch"><span class="n">I</span><h2>Software</h2><span class="r"></span><span class="n">2</span></div>
     <div class="ent"><div class="sec"><b>§1.1</b>Streamlit · FastAPI · SQLite · yfinance</div><div>
       <h3>IHSG Desk</h3>
       <div class="t">STREAMLIT · FASTAPI · SQLITE</div>
-      <p>Sistem pemantauan IHSG/IDX: board, radar, watchlist, sinyal teknikal, skor. Alur data: kolektor → SQLite → 11 engine analisis → FastAPI → Streamlit. Pergerakan harga di luar batas wajar pada saham likuid ditandai dan dinormalisasi.</p>
-    </div><div class="m"><b>11 engine</b>data → engine → UI<div style="margin-top:8px"><b>v3.2.1</b>data-truth</div></div></div>
+      <p>IHSG/IDX monitoring system: board, radar, watchlist, technical signals, score. Data path: collectors → SQLite → 11 analysis engines → FastAPI → Streamlit. Outlier price moves in liquid stocks are flagged and normalised.</p>
+    </div><div class="m"><b>11 engines</b>data → engine → UI<div style="margin-top:8px"><b>v3.2.1</b>data-truth</div></div></div>
     <div class="ent"><div class="sec"><b>§1.2</b>Python · Streamlit · pytest · MIT</div><div>
       <h3>AutoPlot Civil</h3>
       <div class="t">PYTHON · STREAMLIT · MIT</div>
-      <p>Sebelas modul perhitungan: kuat tekan beton (koreksi h/d), sondir/CPT, saringan USCS/AASHTO, pemadatan Proctor, hidrologi Manning dan Rasional, SPT, Atterberg, penurunan Terzaghi, dinding penahan Rankine. Tiap modul menerima data uji lapangan dan mengeluarkan besaran, kurva, serta lembar hasil.</p>
-    </div><div class="m"><b>11+ modul</b>±31.000 baris<div style="margin-top:8px"><b>MIT</b>open source</div></div></div>
+      <p>Eleven calculation modules: concrete compressive strength (h/d correction), cone penetration, USCS/AASHTO grain-size analysis, Proctor compaction, Manning and Rational hydrology, SPT, Atterberg limits, Terzaghi settlement, Rankine retaining wall. Each module takes field test data and produces quantities, curves, and result sheets.</p>
+    </div><div class="m"><b>11+ modules</b>~31,000 lines<div style="margin-top:8px"><b>MIT</b>open source</div></div></div>
   </section>
 
   <section class="chap"><div class="ch"><span class="n">II</span><h2>Engineering</h2><span class="r"></span><span class="n">3</span></div>
     <div class="ent"><div class="sec"><b>§2.1</b>Gumbel · HSS Nakayasu</div><div>
-      <h3>Hidrologi</h3>
+      <h3>Hydrology</h3>
       <div class="t">GUMBEL · HSS NAKAYASU</div>
-      <p>Debit rencana dan dimensi hidrolis saluran. Kala ulang: distribusi Gumbel. Hidrograf satuan: HSS Nakayasu. Debit puncak, dimensi penampang, dan tinggi jagaan mengikuti hasil kala ulang terpilih.</p>
-    </div><div class="m"><b>50,88 m³/s</b>Q100<div style="margin-top:8px"><b>316,25 mm</b>X100</div></div></div>
-    <div class="ent"><div class="sec"><b>§2.2</b>Gumbel · kala ulang</div><div>
-      <h3>Analisis Frekuensi Curah Hujan</h3>
-      <div class="t">FREKUENSI · DISTRIBUSI GUMBEL</div>
-      <p>Analisis frekuensi terhadap curah hujan harian maksimum tahunan. Deret hujan diseleksi berdasarkan kelengkapan pencatatan; parameter statistik (rerata, simpangan baku, Yn, Sn) dihitung; curah hujan rencana dievaluasi untuk setiap kala ulang. Keluaran digunakan untuk mengkaji respons debit puncak terhadap perubahan tata guna lahan.</p>
-    </div><div class="m"><b>Distribusi Gumbel</b>kala ulang<div style="margin-top:8px"><b>T25–T100</b>rentang</div></div></div>
+      <p>Design discharge and hydraulic channel dimensions. Return period: Gumbel distribution. Unit hydrograph: HSS Nakayasu. Peak discharge, cross-section dimensions, and freeboard follow the selected return period.</p>
+    </div><div class="m"><b>50.88 m³/s</b>Q100<div style="margin-top:8px"><b>316.25 mm</b>X100</div></div></div>
+    <div class="ent"><div class="sec"><b>§2.2</b>Gumbel · return period</div><div>
+      <h3>Rainfall Frequency Analysis</h3>
+      <div class="t">FREQUENCY · GUMBEL DISTRIBUTION</div>
+      <p>Frequency analysis of annual maximum daily rainfall. The series is screened for completeness of records; statistical parameters (mean, standard deviation, Yn, Sn) are computed; design rainfall is evaluated for each return period. Output is used to assess peak discharge response to land-use change.</p>
+    </div><div class="m"><b>Gumbel distribution</b>return period<div style="margin-top:8px"><b>T25–T100</b>range</div></div></div>
     <div class="ent"><div class="sec"><b>§2.3</b>SRGI · GMRT · MSL</div><div>
-      <h3>Analisis Pasut &amp; Batimetri</h3>
-      <div class="t">HARMONIK · SRGI · GMRT</div>
-      <p>Analisis harmonik terhadap deret tinggi muka laut, dilanjutkan densifikasi grid untuk memperoleh sebaran amplitudo dan fasa komponen pasut. Sebelas datum diikatkan pada MSL; selisih terhadap acuan BIG ±0,004 m. Batimetri GMRT dikoreksi terhadap pasut melalui H = TMA − MSL − D.</p>
-    </div><div class="m"><b>8.760 titik</b>pasut<div style="margin-top:8px"><b>±0,004 m</b>vs BIG</div></div></div>
+      <h3>Tidal &amp; Bathymetric Analysis</h3>
+      <div class="t">HARMONIC · SRGI · GMRT</div>
+      <p>Harmonic analysis of sea-level series, followed by grid densification to obtain the amplitude and phase distribution of tidal constituents. Eleven datums are tied to MSL; deviation from the BIG reference is ±0.004 m. GMRT bathymetry is corrected for tide via H = TMA − MSL − D.</p>
+    </div><div class="m"><b>8,760 points</b>tide<div style="margin-top:8px"><b>±0.004 m</b>vs BIG</div></div></div>
   </section>
 
   <section class="chap"><div class="ch"><span class="n">III</span><h2>Data</h2><span class="r"></span><span class="n">2</span></div>
     <div class="ent"><div class="sec"><b>§3.1</b>Python · long format</div><div>
-      <h3>Harmonisasi Data Iklim</h3>
-      <div class="t">SKEMA TABULAR PANJANG · 1983–2026</div>
-      <p>Penyeragaman data iklim multi-stasiun ke skema tabular panjang: satu baris merepresentasikan kombinasi stasiun, parameter, dan waktu. Rentang yang dicakup 1983–2026. Prosedur meliputi pemeriksaan kelengkapan deret serta penandaan nilai kosong dan pencilan.</p>
-    </div><div class="m"><b>long format</b>penyeragaman<div style="margin-top:8px"><b>per stasiun</b>pemeriksaan celah</div></div></div>
+      <h3>Climate Data Harmonisation</h3>
+      <div class="t">LONG TABULAR SCHEMA · 1983–2026</div>
+      <p>Harmonisation of multi-station climate data into a long tabular schema: one row represents a station, parameter, and time combination. Coverage spans 1983–2026. The procedure includes completeness checks and flagging of missing values and outliers.</p>
+    </div><div class="m"><b>long format</b>standardisation<div style="margin-top:8px"><b>per station</b>gap checking</div></div></div>
     <div class="ent"><div class="sec"><b>§3.2</b>NetCDF · xarray · reanalysis</div><div>
-      <h3>Pengolahan Data Laut</h3>
-      <div class="t">NETCDF · GRID MULTI-VARIABEL</div>
-      <p>Pengolahan data laut berformat NetCDF dari grid multi-variabel: tinggi gelombang, kecepatan angin, suhu permukaan laut, salinitas, arus, tinggi muka laut, dan klorofil-a. Keluaran menjadi masukan bagi perhitungan pesisir, analisis pasut, dan batimetri.</p>
-    </div><div class="m"><b>NetCDF</b>grid multi-variabel<div style="margin-top:8px"><b>xarray</b>pengolahan</div></div></div>
+      <h3>Ocean Data Processing</h3>
+      <div class="t">NETCDF · MULTI-VARIABLE GRID</div>
+      <p>Processing of ocean data in NetCDF format from multi-variable grids: wave height, wind speed, sea surface temperature, salinity, currents, sea level, and chlorophyll-a. Output feeds coastal computation, tidal analysis, and bathymetry.</p>
+    </div><div class="m"><b>NetCDF</b>multi-variable grid<div style="margin-top:8px"><b>xarray</b>processing</div></div></div>
   </section>
 
   <section class="sk">
-    <div><b>Hidrologi</b>Gumbel · HSS Nakayasu · Q80 · FAO-56 ETo<span class="ev">Q100 50,88 m³/s · X100 316,25 mm</span></div>
-    <div><b>Geoteknik</b>CPT/SPT · Proctor · Terzaghi · Rankine · USCS/AASHTO<span class="ev">AutoPlot Civil</span></div>
-    <div><b>Data &amp; otomasi</b>Python · Excel · Streamlit · FastAPI · SQLite<span class="ev">IHSG Desk, harmonisasi iklim</span></div>
-    <div><b>Pengukuran &amp; laut</b>Harmonik pasut · batimetri · NetCDF · SST · gelombang<span class="ev">pasut, olahan laut</span></div>
+    <div><b>Hydrology</b>Gumbel · HSS Nakayasu · Q80 · FAO-56 ETo<span class="ev">Q100 50.88 m³/s · X100 316.25 mm</span></div>
+    <div><b>Geotechnics</b>CPT/SPT · Proctor · Terzaghi · Rankine · USCS/AASHTO<span class="ev">AutoPlot Civil</span></div>
+    <div><b>Data &amp; automation</b>Python · Excel · Streamlit · FastAPI · SQLite<span class="ev">IHSG Desk, climate harmonisation</span></div>
+    <div><b>Surveying &amp; ocean</b>Tidal harmonic · bathymetry · NetCDF · SST · waves<span class="ev">tides, ocean processing</span></div>
   </section>
 
-  <section class="cta"><h2>Ada data yang perlu <em>dirapikan, dihitung, atau dijadikan dashboard?</em></h2><a href="mailto:aldiansyahpermanap@gmail.com">aldiansyahpermanap@gmail.com →</a></section>
+  <section class="cta"><h2>Data that needs <em>cleaning, computing, or a dashboard?</em></h2><a href="mailto:aldiansyahpermanap@gmail.com">aldiansyahpermanap@gmail.com →</a></section>
 </main>
 <footer><span>Aldiansyah Permana</span><span>email · github</span></footer>
 <script>
